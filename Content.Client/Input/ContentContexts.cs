@@ -86,6 +86,19 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.Arcade2);
             human.AddFunction(ContentKeyFunctions.Arcade3);
             human.AddFunction(ContentKeyFunctions.LookUp);
+            // WD EDIT START
+            human.AddFunction(ContentKeyFunctions.TargetDollHead);
+            human.AddFunction(ContentKeyFunctions.TargetDollChest);
+            human.AddFunction(ContentKeyFunctions.TargetDollGroin);
+            human.AddFunction(ContentKeyFunctions.TargetDollRightArm);
+            human.AddFunction(ContentKeyFunctions.TargetDollRightHand);
+            human.AddFunction(ContentKeyFunctions.TargetDollLeftArm);
+            human.AddFunction(ContentKeyFunctions.TargetDollLeftHand);
+            human.AddFunction(ContentKeyFunctions.TargetDollRightLeg);
+            human.AddFunction(ContentKeyFunctions.TargetDollRightFoot);
+            human.AddFunction(ContentKeyFunctions.TargetDollLeftLeg);
+            human.AddFunction(ContentKeyFunctions.TargetDollLeftFoot);
+            // WD EDIT END
 
             // actions should be common (for ghosts, mobs, etc)
             common.AddFunction(ContentKeyFunctions.OpenActionsMenu);

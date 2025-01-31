@@ -70,21 +70,27 @@ binds:
 - function: CameraRotateLeft
   type: State
   key: NumpadNum7
+  mod1: Control # WD EDIT
 - function: CameraRotateRight
   type: State
   key: NumpadNum9
+  mod1: Control # WD EDIT
 - function: CameraReset
   type: State
   key: NumpadNum8
+  mod1: Control # WD EDIT
 - function: ZoomOut
   type: State
   key: NumpadNum4
+  mod1: Control # WD EDIT
 - function: ZoomIn
   type: State
   key: NumpadNum6
+  mod1: Control # WD EDIT
 - function: ResetZoom
   type: State
   key: NumpadNum5
+  mod1: Control # WD EDIT
 # Misc
 - function: ShowEscapeMenu
   type: State
@@ -271,6 +277,27 @@ binds:
   type: State
   mod1: Shift
   key: R
+# WD EDIT START
+# Target doll
+- function: TargetDollHead
+  type: State
+  key: NumpadNum8
+- function: TargetDollChest
+  type: State
+  key: NumpadNum5
+- function: TargetDollRightArm
+  type: State
+  key: NumpadNum4
+- function: TargetDollLeftArm
+  type: State
+  key: NumpadNum6
+- function: TargetDollRightLeg
+  type: State
+  key: NumpadNum1
+- function: TargetDollLeftLeg
+  type: State
+  key: NumpadNum3
+# WD EDIT END
 - function: ShowDebugConsole
   type: State
   key: Tilde

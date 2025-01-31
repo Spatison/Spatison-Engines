@@ -61,6 +61,22 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction ToggleStanding = "ToggleStanding";
         public static readonly BoundKeyFunction ToggleCrawlingUnder = "ToggleCrawlingUnder";
         public static readonly BoundKeyFunction LookUp = "LookUp";
+        // WD EDIT START
+        public static readonly BoundKeyFunction TargetDollHead = "TargetDollHead";
+        public static readonly BoundKeyFunction TargetDollChest = "TargetDollChest";
+        public static readonly BoundKeyFunction TargetDollGroin = "TargetDollGroin";
+        public static readonly BoundKeyFunction TargetDollRightArm = "TargetDollRightArm";
+        public static readonly BoundKeyFunction TargetDollRightHand = "TargetDollRightHand";
+        public static readonly BoundKeyFunction TargetDollLeftArm = "TargetDollLeftArm";
+        public static readonly BoundKeyFunction TargetDollLeftHand = "TargetDollLeftHand";
+        public static readonly BoundKeyFunction TargetDollRightLeg = "TargetDollRightLeg";
+        public static readonly BoundKeyFunction TargetDollRightFoot = "TargetDollRightFoot";
+        public static readonly BoundKeyFunction TargetDollLeftLeg = "TargetDollLeftLeg";
+        public static readonly BoundKeyFunction TargetDollLeftFoot = "TargetDollLeftFoot";
+        public static readonly BoundKeyFunction TargetDollEyes = "TargetDollEyes";
+        public static readonly BoundKeyFunction TargetDollMouth = "TargetDollMouth";
+        public static readonly BoundKeyFunction TargetDollTail = "TargetDollTail";
+        // WD EDIT END
 
         public static readonly BoundKeyFunction ArcadeUp = "ArcadeUp";
         public static readonly BoundKeyFunction ArcadeDown = "ArcadeDown";

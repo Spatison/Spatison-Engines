@@ -120,6 +120,7 @@
   abstract: true
   components:
   - type: CombatMode
+  - type: TargetDoll # WD EDIT
   - type: MeleeWeapon
     hidden: true
     soundHit:
