@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
 using Content.Shared.Body.Organ;
@@ -141,7 +142,7 @@ public partial class SharedBodySystem
         if (!Resolve(bodyEnt, ref bodyEnt.Comp, logMissing: false))
             return;
 
-        if (legEnt.Comp.PartType == BodyPartType.Leg)
+        if ((BodyPart.Legs & legEnt.Comp.PartType) != 0) // WD EDIT
         {
             bodyEnt.Comp.LegEntities.Add(legEnt);
             UpdateMovementSpeed(bodyEnt);
@@ -154,7 +155,7 @@ public partial class SharedBodySystem
         if (!Resolve(bodyEnt, ref bodyEnt.Comp, logMissing: false))
             return;
 
-        if (legEnt.Comp.PartType == BodyPartType.Leg)
+        if ((BodyPart.Legs & legEnt.Comp.PartType) != 0) // WD EDIT
         {
             bodyEnt.Comp.LegEntities.Remove(legEnt);
             UpdateMovementSpeed(bodyEnt);
@@ -253,7 +254,7 @@ public partial class SharedBodySystem
     private BodyPartSlot? CreatePartSlot(
         EntityUid partUid,
         string slotId,
-        BodyPartType partType,
+        BodyPart partType, // WD EDIT
         BodyPartComponent? part = null)
     {
         if (!Resolve(partUid, ref part, logMissing: false))
@@ -273,7 +274,7 @@ public partial class SharedBodySystem
     public bool TryCreatePartSlot(
         EntityUid? partId,
         string slotId,
-        BodyPartType partType,
+        BodyPart partType, // WD EDIT
         [NotNullWhen(true)] out BodyPartSlot? slot,
         BodyPartComponent? part = null)
     {
@@ -299,7 +300,7 @@ public partial class SharedBodySystem
         EntityUid parentId,
         string slotId,
         EntityUid childId,
-        BodyPartType partType,
+        BodyPart partType, // WD EDIT
         BodyPartComponent? parent = null,
         BodyPartComponent? child = null)
     {
@@ -608,7 +609,7 @@ public partial class SharedBodySystem
     /// </summary>
     public bool BodyHasPartType(
         EntityUid bodyId,
-        BodyPartType type,
+        BodyPart type, // WD EDIT
         BodyComponent? body = null)
     {
         return GetBodyChildrenOfType(bodyId, type, body).Any();
@@ -655,12 +656,12 @@ public partial class SharedBodySystem
 
     public IEnumerable<(EntityUid Id, BodyPartComponent Component)> GetBodyChildrenOfType(
         EntityUid bodyId,
-        BodyPartType type,
+        BodyPart type, // WD EDIT
         BodyComponent? body = null)
     {
         foreach (var part in GetBodyChildren(bodyId, body))
         {
-            if (part.Component.PartType == type)
+            if ((type & part.Component.PartType) != 0) // WD EDIT
                 yield return part;
         }
     }

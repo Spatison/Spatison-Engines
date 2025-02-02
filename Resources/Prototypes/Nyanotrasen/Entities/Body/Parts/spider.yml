@@ -31,10 +31,10 @@
   components:
   - type: Sprite
     sprite: Mobs/Species/Moth/parts.rsi # placeholder sprite
-    state: "torso_m"
+    state: chest_m # WD EDIT
   - type: Icon
     sprite: Mobs/Species/Moth/parts.rsi
-    state: "torso_m"
+    state: chest_m # WD EDIT
   - type: BodyPart #"Other" type
   - type: Extractable
     juiceSolution:
@@ -56,8 +56,7 @@
     sprite: Objects/Consumable/Food/meat.rsi
     state: spiderleg
   - type: BodyPart
-    partType: Leg
-    symmetry: Right
+    partType: RightLeg # WD EDIT
   - type: MovementBodyPart #should actual spiders get a seperate part from arachne?
     walkSpeed : 2.7
     sprintSpeed : 5
@@ -74,8 +73,7 @@
     sprite: Objects/Consumable/Food/meat.rsi
     state: spiderleg
   - type: BodyPart
-    partType: Leg
-    symmetry: Left
+    partType: LeftLeg # WD EDIT
   - type: MovementBodyPart #should actual spiders get a seperate part from arachne?
     walkSpeed : 2.7
     sprintSpeed : 5

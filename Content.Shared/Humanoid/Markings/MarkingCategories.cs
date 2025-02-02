@@ -12,6 +12,7 @@ namespace Content.Shared.Humanoid.Markings
         HeadSide,
         Snout,
         Chest,
+        Groin, // WD EDIT
         RightArm,
         RightHand,
         LeftArm,
@@ -37,6 +38,7 @@ namespace Content.Shared.Humanoid.Markings
                 HumanoidVisualLayers.HeadSide => MarkingCategories.HeadSide,
                 HumanoidVisualLayers.Snout => MarkingCategories.Snout,
                 HumanoidVisualLayers.Chest => MarkingCategories.Chest,
+                HumanoidVisualLayers.Groin => MarkingCategories.Groin, // WD EDIT
                 HumanoidVisualLayers.RArm => MarkingCategories.RightArm,
                 HumanoidVisualLayers.LArm => MarkingCategories.LeftArm,
                 HumanoidVisualLayers.RHand => MarkingCategories.RightHand,

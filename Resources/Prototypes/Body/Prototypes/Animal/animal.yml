@@ -1,10 +1,12 @@
 ﻿- type: body
   id: Animal
   name: "animal"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoAnimal
+    # WD EDIT START
+    chest:
+      part: ChestAnimal
+      # WD EDIT END
       connections:
       - legs
       organs:
@@ -23,10 +25,12 @@
 - type: body
   id: Mouse
   name: "mouse"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoAnimal
+    # WD EDIT START
+    chest:
+      part: ChestAnimal
+      # WD EDIT END
       connections:
       - legs
       organs:

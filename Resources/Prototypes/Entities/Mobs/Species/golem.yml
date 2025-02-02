@@ -13,6 +13,12 @@
 #       color: "#e8b59b"
 #       sprite: Nyanotrasen/Mobs/Species/Golem/cult.rsi
 #       state: cultgolem_chest
+#     # WD EDIT START
+#     - map: [ "enum.HumanoidVisualLayers.Groin" ]
+#       color: "#e8b59b"
+#       sprite: Nyanotrasen/Mobs/Species/Golem/cult.rsi
+#       state: cultgolem_groin
+#     # WD EDIT START
 #     - map: [ "enum.HumanoidVisualLayers.Head" ]
 #       color: "#e8b59b"
 #       sprite: Nyanotrasen/Mobs/Species/Golem/cult.rsi

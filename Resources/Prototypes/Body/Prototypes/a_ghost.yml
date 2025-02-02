@@ -1,10 +1,12 @@
 ﻿- type: body
   id: Aghost
   name: "aGhost"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoHuman
+    # WD EDIT START
+    chest:
+      part: ChestHuman
+      # WD EDIT END
       connections:
       - right_arm
       - left_arm

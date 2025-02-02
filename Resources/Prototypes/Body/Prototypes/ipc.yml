@@ -1,24 +1,32 @@
 ﻿- type: body
   id: IPC
   name: "ipc"
-  root: torso
+  root: chest # WD EDIT
   slots:
     head:
       part: HeadIPC
       connections:
-      - torso
+      - chest # WD EDIT
       organs:
         eyes: OrganIPCEyes
-    torso:
-      part: TorsoIPC
+    # WD EDIT START
+    chest:
+      part: ChestIPC
+      # WD EDIT END
       connections:
       - right arm
       - left arm
-      - right leg
-      - left leg
+      - groin # WD EDIT
       organs:
         brain: PositronicBrain
         heart: OrganIPCPump
+    # WD EDIT START
+    groin:
+      part: GroinIPC
+      connections:
+      - right leg
+      - left leg
+    # WD EDIT END
     right arm:
       part: RightArmIPC
       connections:

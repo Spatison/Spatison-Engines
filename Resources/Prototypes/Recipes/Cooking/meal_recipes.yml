@@ -1798,7 +1798,7 @@
   result: FoodMeatHumanKebab
   time: 15
   solids:
-    TorsoHuman: 1
+    ChestHuman: 1 # WD EDIT
     FoodKebabSkewer: 1
 
 - type: microwaveMealRecipe

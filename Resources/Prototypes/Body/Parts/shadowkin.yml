@@ -1,155 +1,118 @@
 - type: entity
   id: PartShadowkin
-  parent: BaseItem
-  name: "Shadowkin body part"
+  # WD EDIT START
+  parent: BasePart
+  name: shadowkin body part
+  # WD EDIT END
   abstract: true
   components:
     - type: Sprite
-      netsync: false
       sprite: Mobs/Species/Shadowkin/parts.rsi
-    - type: Icon
-      sprite: Mobs/Species/Shadowkin/parts.rsi
-    - type: Damageable
-      damageContainer: Biological
-    - type: BodyPart
-    - type: ContainerContainer
-      containers:
-        bodypart: !type:Container
-          ents: []
+
+# WD EDIT START
+- type: entity
+  id: ChestShadowkin
+  name: shadowkin chest
+  parent: [PartShadowkin, BaseChest]
+  components:
+  - type: Sprite
+    state: chest_m
 
 - type: entity
-  id: TorsoShadowkin
-  name: "Shadowkin torso"
-  parent: PartShadowkin
+  id: GroinShadowkin
+  name: shadowkin groin
+  parent: [PartShadowkin, BaseGroin]
   components:
-    - type: Sprite
-      state: "torso_m"
-    - type: Icon
-      state: "torso_m"
-    - type: BodyPart
-      partType: Torso
+  - type: Sprite
+    state: groin_m
+# WD EDIT END
 
 - type: entity
   id: HeadShadowkin
-  name: "Shadowkin head"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: shadowkin head
+  parent: [PartShadowkin, BaseHead]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "head_m"
-    - type: Icon
-      state: "head_m"
-    - type: BodyPart
-      partType: Head
-    - type: Input
-      context: "ghost"
-    - type: MovementSpeedModifier
-      baseWalkSpeed: 0
-      baseSprintSpeed: 0
-    - type: InputMover
-    - type: GhostOnMove
+      state: head_m # WD EDIT
 
 - type: entity
   id: LeftArmShadowkin
-  name: "left Shadowkin arm"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: left shadowkin arm
+  parent: [PartShadowkin, BaseLeftArm]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "l_arm"
-    - type: Icon
-      state: "l_arm"
-    - type: BodyPart
-      partType: Arm
-      symmetry: Left
+      state: l_arm # WD EDIT
 
 - type: entity
   id: RightArmShadowkin
-  name: "right Shadowkin arm"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: right shadowkin arm
+  parent: [PartShadowkin, BaseRightArm]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "r_arm"
-    - type: Icon
-      state: "r_arm"
-    - type: BodyPart
-      partType: Arm
-      symmetry: Right
+      state: r_arm # WD EDIT
 
 - type: entity
   id: LeftHandShadowkin
-  name: "left Shadowkin hand"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: left shadowkin hand
+  parent: [PartShadowkin, BaseLeftHand]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "l_hand"
-    - type: Icon
-      state: "l_hand"
-    - type: BodyPart
-      partType: Hand
-      symmetry: Left
+      state: l_hand # WD EDIT
 
 - type: entity
   id: RightHandShadowkin
-  name: "right Shadowkin hand"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: right shadowkin hand
+  parent: [PartShadowkin, BaseRightHand]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "r_hand"
-    - type: Icon
-      state: "r_hand"
-    - type: BodyPart
-      partType: Hand
-      symmetry: Right
+      state: r_hand # WD EDIT
 
 - type: entity
   id: LeftLegShadowkin
-  name: "left Shadowkin leg"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: left shadowkin leg
+  parent: [PartShadowkin, BaseLeftLeg]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "l_leg"
-    - type: Icon
-      state: "l_leg"
-    - type: BodyPart
-      partType: Leg
-      symmetry: Left
-    - type: MovementBodyPart
+      state: l_leg # WD EDIT
 
 - type: entity
   id: RightLegShadowkin
-  name: "right Shadowkin leg"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: right shadowkin leg
+  parent: [PartShadowkin, BaseRightLeg]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "r_leg"
-    - type: Icon
-      state: "r_leg"
-    - type: BodyPart
-      partType: Leg
-      symmetry: Right
-    - type: MovementBodyPart
+      state: r_leg # WD EDIT
 
 - type: entity
   id: LeftFootShadowkin
-  name: "left Shadowkin foot"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: left shadowkin foot
+  parent: [PartShadowkin, BaseLeftFoot]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "l_foot"
-    - type: Icon
-      state: "l_foot"
-    - type: BodyPart
-      partType: Foot
-      symmetry: Left
+      state: l_foot # WD EDIT
 
 - type: entity
   id: RightFootShadowkin
-  name: "right Shadowkin foot"
-  parent: PartShadowkin
+  # WD EDIT START
+  name: right shadowkin foot
+  parent: [PartShadowkin, BaseRightFoot]
+  # WD EDIT END
   components:
     - type: Sprite
-      state: "r_foot"
-    - type: Icon
-      state: "r_foot"
-    - type: BodyPart
-      partType: Foot
-      symmetry: Right
+      state: r_foot # WD EDIT

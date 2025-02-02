@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from https://github.com/ParadiseSS13/Paradise edited by Floofers",
+  "copyright": "Taken from https://github.com/ParadiseSS13/Paradise edited by Floofers. Chest and Groin by WWDP",
   "size": {
     "x": 32,
     "y": 32
@@ -54,11 +54,19 @@
       "directions": 4
     },
     {
-      "name": "torso_f",
+      "name": "chest_f",
       "directions": 4
     },
     {
-      "name": "torso_m",
+      "name": "chest_m",
+      "directions": 4
+    },
+    {
+      "name": "groin_f",
+      "directions": 4
+    },
+    {
+      "name": "groin_m",
       "directions": 4
     },
     {

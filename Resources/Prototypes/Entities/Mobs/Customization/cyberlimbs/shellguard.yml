@@ -27,9 +27,22 @@
   speciesRestriction: [IPC]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/shellguard/shellguard_main.rsi
-    state: torso-1
+    state: chest-1 # WD EDIT
   - sprite: Mobs/Customization/cyberlimbs/shellguard/shellguard_main.rsi
-    state: torso-2
+    state: chest-2 # WD EDIT
+
+# WD EDIT START
+- type: marking
+  id: CyberLimbsMarkingShellguardGroin
+  bodyPart: Groin
+  markingCategory: Groin
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Mobs/Customization/cyberlimbs/shellguard/shellguard_main.rsi
+    state: groin-1
+  - sprite: Mobs/Customization/cyberlimbs/shellguard/shellguard_main.rsi
+    state: groin-2
+# WD EDIT END
 
 - type: marking
   id: CyberLimbsMarkingShellguardLArm

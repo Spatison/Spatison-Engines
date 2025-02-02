@@ -6,6 +6,10 @@
   name: "human body part"
   abstract: true
   components:
+  # WD EDIT START
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+  # WD EDIT END
   - type: Extractable
     juiceSolution:
       reagents:
@@ -14,21 +18,37 @@
       - ReagentId: Blood
         Quantity: 10
 
+# WD EDIT START
 - type: entity
-  id: TorsoHuman
-  name: "human torso"
-  parent: [PartHuman, BaseTorso]
+  id: ChestHuman
+  name: human chest
+  parent: [PartHuman, BaseChest]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
-    state: "torso_m"
+    state: chest_m
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  id: GroinHuman
+  name: human groin
+  parent: [PartHuman, BaseGroin]
+  components:
+  - type: Sprite
+    state: groin_m
   - type: Extractable
     juiceSolution:
       reagents:
       - ReagentId: Fat
         Quantity: 10
       - ReagentId: Blood
-        Quantity: 20
+        Quantity: 15
+# WD EDIT END
 
 - type: entity
   id: HeadHuman
@@ -36,7 +56,6 @@
   parent: [PartHuman, BaseHead]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "head_m"
   - type: Extractable
     juiceSolution:
@@ -52,7 +71,6 @@
   parent: [PartHuman, BaseLeftArm]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "l_arm"
 
 - type: entity
@@ -61,7 +79,6 @@
   parent: [PartHuman, BaseRightArm]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "r_arm"
 
 - type: entity
@@ -70,7 +87,6 @@
   parent: [PartHuman, BaseLeftHand]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "l_hand"
 
 - type: entity
@@ -79,7 +95,6 @@
   parent: [PartHuman, BaseRightHand]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "r_hand"
 
 - type: entity
@@ -88,7 +103,6 @@
   parent: [PartHuman, BaseLeftLeg]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "l_leg"
 
 - type: entity
@@ -97,7 +111,6 @@
   parent: [PartHuman, BaseRightLeg]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "r_leg"
 
 - type: entity
@@ -106,7 +119,6 @@
   parent: [PartHuman, BaseLeftFoot]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "l_foot"
 
 - type: entity
@@ -115,5 +127,4 @@
   parent: [PartHuman, BaseRightFoot]
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/parts.rsi
     state: "r_foot"

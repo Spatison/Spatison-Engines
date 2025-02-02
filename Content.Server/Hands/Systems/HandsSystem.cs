@@ -2,6 +2,7 @@ using System.Numerics;
 using Content.Server.Inventory;
 using Content.Server.Stack;
 using Content.Server.Stunnable;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Body.Part;
 using Content.Shared.CombatMode;
@@ -100,25 +101,27 @@ namespace Content.Server.Hands.Systems
 
         private void HandleBodyPartAdded(EntityUid uid, HandsComponent component, ref BodyPartAddedEvent args)
         {
-            if (args.Part.Comp.PartType != BodyPartType.Hand)
+            if ((BodyPart.Hands & args.Part.Comp.PartType) == 0) // WD EDIT
                 return;
 
             // If this annoys you, which it should.
             // Ping Smugleaf.
-            var location = args.Part.Comp.Symmetry switch
+            // WD EDIT START
+            var location = args.Part.Comp.PartType switch
             {
-                BodyPartSymmetry.None => HandLocation.Middle,
-                BodyPartSymmetry.Left => HandLocation.Left,
-                BodyPartSymmetry.Right => HandLocation.Right,
-                _ => throw new ArgumentOutOfRangeException(nameof(args.Part.Comp.Symmetry))
+                BodyPart.RightHand => HandLocation.Right,
+                BodyPart.MiddleHand => HandLocation.Middle,
+                BodyPart.LeftHand => HandLocation.Left,
+                _ => throw new ArgumentOutOfRangeException(nameof(args.Part.Comp.PartType))
             };
+            // WD EDIT END
 
             AddHand(uid, args.Slot, location);
         }
 
         private void HandleBodyPartRemoved(EntityUid uid, HandsComponent component, ref BodyPartRemovedEvent args)
         {
-            if (args.Part.Comp.PartType != BodyPartType.Hand)
+            if ((BodyPart.Hands & args.Part.Comp.PartType ) == 0) // WD EDIT
                 return;
 
             RemoveHand(uid, args.Slot);

@@ -1,10 +1,12 @@
 ﻿- type: body
   id: Slimes
   name: "slimes"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoSlime
+    # WD EDIT START
+    chest:
+      part: ChestSlime
+      # WD EDIT END
       connections:
       - legs
       organs:

@@ -1,22 +1,31 @@
 ﻿- type: body
   id: Slime
   name: "slime"
-  root: torso
+  root: chest # WD EDIT
   slots:
     head:
       part: HeadSlime
       connections:
-      - torso
-    torso:
-      part: TorsoSlime
+      # WD EDIT START
+      - chest
+    chest:
+      part: ChestSlime
+      # WD EDIT END
       connections:
       - right arm
       - left arm
+      - groin # WD EDIT
+      organs:
+        lungs: OrganSlimeLungs
+    # WD EDIT START
+    groin:
+      part: GroinSlime
+      connections:
       - right leg
       - left leg
       organs:
         core: SentientSlimeCore
-        lungs: OrganSlimeLungs
+    # WD EDIT END
     right arm:
       part: RightArmSlime
       connections:

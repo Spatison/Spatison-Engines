@@ -1,4 +1,5 @@
-﻿using Content.Shared.Body.Components;
+﻿using Content.Shared._White.TargetDoll;
+using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
@@ -18,7 +19,7 @@ public sealed partial class BodyPartComponent : Component
     public EntityUid? Body;
 
     [DataField, AutoNetworkedField]
-    public BodyPartType PartType = BodyPartType.Other;
+    public BodyPart PartType = BodyPart.Other; // WD EDIT
 
     // TODO BODY Replace with a simulation of organs
     /// <summary>
@@ -27,9 +28,6 @@ public sealed partial class BodyPartComponent : Component
     /// </summary>
     [DataField("vital"), AutoNetworkedField]
     public bool IsVital;
-
-    [DataField, AutoNetworkedField]
-    public BodyPartSymmetry Symmetry = BodyPartSymmetry.None;
 
     /// <summary>
     /// Child body parts attached to this body part.
@@ -89,9 +87,9 @@ public sealed partial class BodyPartComponent : Component
 public partial struct BodyPartSlot
 {
     public string Id;
-    public BodyPartType Type;
+    public BodyPart Type; // WD EDIT
 
-    public BodyPartSlot(string id, BodyPartType type)
+    public BodyPartSlot(string id, BodyPart type) // WD EDIT
     {
         Id = id;
         Type = type;

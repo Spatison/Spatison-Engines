@@ -26,19 +26,17 @@
       - ReagentId: Blood
         Quantity: 10
 
+# WD EDIT START
 - type: entity
-  id: TorsoVox
-  name: "vox torso"
+  id: ChestVox
+  name: vox chest
   parent: PartVox
   components:
     - type: Sprite
       sprite: Mobs/Species/Vox/parts.rsi
-      state: "torso"
-    - type: Icon
-      sprite: Mobs/Species/Vox/parts.rsi
-      state: "torso"
+      state: chest
     - type: BodyPart
-      partType: Torso
+      partType: Chest
     - type: Extractable
       juiceSolution:
         reagents:
@@ -46,6 +44,25 @@
           Quantity: 3
         - ReagentId: Blood
           Quantity: 10
+
+- type: entity
+  id: GroinVox
+  name: vox groin
+  parent: PartVox
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: groin
+  - type: BodyPart
+    partType: Groin
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+# WD EDIT END
 
 - type: entity
   id: HeadVox
@@ -86,8 +103,7 @@
       sprite: Mobs/Species/Vox/parts.rsi
       state: "l_arm"
     - type: BodyPart
-      partType: Arm
-      symmetry: Left
+      partType: LeftArm # WD EDIT
 
 - type: entity
   id: RightArmVox
@@ -101,8 +117,7 @@
       sprite: Mobs/Species/Vox/parts.rsi
       state: "r_arm"
     - type: BodyPart
-      partType: Arm
-      symmetry: Right
+      partType: RightArm # WD EDIT
 
 - type: entity
   id: LeftHandVox
@@ -116,8 +131,7 @@
       sprite: Mobs/Species/Vox/parts.rsi
       state: "l_hand"
     - type: BodyPart
-      partType: Hand
-      symmetry: Left
+      partType: LeftHand # WD EDIT
 
 - type: entity
   id: RightHandVox
@@ -131,8 +145,7 @@
       sprite: Mobs/Species/Vox/parts.rsi
       state: "r_hand"
     - type: BodyPart
-      partType: Hand
-      symmetry: Right
+      partType: RightHand # WD EDIT
 
 - type: entity
   id: LeftLegVox
@@ -146,8 +159,7 @@
       sprite: Mobs/Species/Vox/parts.rsi
       state: "l_leg"
     - type: BodyPart
-      partType: Leg
-      symmetry: Left
+      partType: LeftLeg # WD EDIT
     - type: MovementBodyPart
 
 - type: entity
@@ -162,8 +174,7 @@
       sprite: Mobs/Species/Vox/parts.rsi
       state: "r_leg"
     - type: BodyPart
-      partType: Leg
-      symmetry: Right
+      partType: RightLeg # WD EDIT
     - type: MovementBodyPart
 
 - type: entity
@@ -178,8 +189,7 @@
       sprite: Mobs/Species/Vox/parts.rsi
       state: "l_foot"
     - type: BodyPart
-      partType: Foot
-      symmetry: Left
+      partType: LeftFoot # WD EDIT
 
 - type: entity
   id: RightFootVox
@@ -193,5 +203,4 @@
       sprite: Mobs/Species/Vox/parts.rsi
       state: "r_foot"
     - type: BodyPart
-      partType: Foot
-      symmetry: Right
+      partType: RightFoot # WD EDIT

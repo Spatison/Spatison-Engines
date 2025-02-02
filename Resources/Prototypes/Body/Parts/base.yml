@@ -20,14 +20,25 @@
     tags:
       - Trash
 
+# WD EDIT START
 - type: entity
-  id: BaseTorso
-  name: "torso"
+  id: BaseChest
+  name: chest
   parent: BasePart
   abstract: true
   components:
   - type: BodyPart
-    partType: Torso
+    partType: Chest
+
+- type: entity
+  id: BaseGroin
+  name: groin
+  parent: BasePart
+  abstract: true
+  components:
+  - type: BodyPart
+    partType: Groin
+# WD EDIT END
 
 - type: entity
   id: BaseHead
@@ -51,8 +62,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Arm
-    symmetry: Left
+    partType: LeftArm # WD EDIT
 
 - type: entity
   id: BaseRightArm
@@ -61,8 +71,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Arm
-    symmetry: Right
+    partType: RightArm # WD EDIT
 
 - type: entity
   id: BaseLeftHand
@@ -71,8 +80,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Hand
-    symmetry: Left
+    partType: LeftHand # WD EDIT
 
 - type: entity
   id: BaseRightHand
@@ -81,8 +89,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Hand
-    symmetry: Right
+    partType: RightHand # WD EDIT
 
 - type: entity
   id: BaseLeftLeg
@@ -91,8 +98,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Leg
-    symmetry: Left
+    partType: LeftLeg # WD EDIT
   - type: MovementBodyPart
 
 - type: entity
@@ -102,8 +108,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Leg
-    symmetry: Right
+    partType: RightLeg # WD EDIT
   - type: MovementBodyPart
 
 - type: entity
@@ -113,8 +118,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Foot
-    symmetry: Left
+    partType: LeftFoot # WD EDIT
 
 - type: entity
   id: BaseRightFoot
@@ -123,5 +127,4 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Foot
-    symmetry: Right
+    partType: RightFoot # WD EDIT

@@ -32,7 +32,18 @@
   speciesRestriction: [IPC]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/wardtakahashi/wardtakahashi_main.rsi
-    state: torso
+    state: chest # WD EDIT
+
+# WD EDIT START
+- type: marking
+  id: CyberLimbsMarkingWardtakahashiGroin
+  bodyPart: Groin
+  markingCategory: Groin
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Mobs/Customization/cyberlimbs/wardtakahashi/wardtakahashi_main.rsi
+    state: groin
+# WD EDIT END
 
 - type: marking
   id: CyberLimbsMarkingWardtakahashiLArm

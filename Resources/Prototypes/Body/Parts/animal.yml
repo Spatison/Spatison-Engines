@@ -43,8 +43,7 @@
     - state: l_hand
     - state: r_hand
   - type: BodyPart
-    partType: Hand
-    symmetry: Left
+    partType: LeftHand # WD EDIT
 
 - type: entity
   id: LegsAnimal
@@ -57,7 +56,7 @@
     - state: l_leg
     - state: r_leg
   - type: BodyPart
-    partType: Leg
+    partType: Legs # WD EDIT
   - type: MovementBodyPart
 
 - type: entity
@@ -71,19 +70,41 @@
     - state: r_foot
     - state: l_foot
   - type: BodyPart
-    partType: Foot
+    partType: RightFoot # WD EDIT
 
+# WD EDIT START
 - type: entity
-  id: TorsoAnimal
-  name: animal torso
+  id: ChestAnimal
+  name: animal chest
   parent: PartAnimal
   noSpawn: true
   components:
   - type: Sprite
     layers:
-    - state: torso_m
+    - state: chest_m
   - type: BodyPart
-    partType: Torso
+    partType: Chest
+  - type: Damageable
+    damageContainer: Biological
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 15
+
+- type: entity
+  id: GroinAnimal
+  name: animal groin
+  parent: PartAnimal
+  noSpawn: true
+  components:
+  - type: Sprite
+    layers:
+    - state: groin_m
+  - type: BodyPart
+    partType: Groin
   - type: Damageable
     damageContainer: Biological
   - type: Extractable
@@ -93,4 +114,4 @@
         Quantity: 10
       - ReagentId: Blood
         Quantity: 20
-
+# WD EDIT END

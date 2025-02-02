@@ -1,10 +1,12 @@
 ﻿- type: body
   id: AnimalNymphBrain
   name: "nymph"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoAnimal
+    # WD EDIT START
+    chest:
+      part: ChestAnimal
+      # WD EDIT END
       connections:
       - legs
       organs:
@@ -24,10 +26,12 @@
 - type: body
   id: AnimalNymphLungs
   name: "nymph"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoAnimal
+    # WD EDIT START
+    chest:
+      part: ChestAnimal
+      # WD EDIT END
       connections:
       - legs
       organs:
@@ -46,10 +50,12 @@
 - type: body
   id: AnimalNymphStomach
   name: "nymph"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoAnimal
+    # WD EDIT START
+    chest:
+      part: ChestAnimal
+      # WD EDIT END
       connections:
       - legs
       organs:

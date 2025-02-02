@@ -14,20 +14,29 @@
   - type: StaticPrice
     price: 100
 
+# WD EDIT START
 - type: entity
-  id: TorsoIPC
-  name: "ipc torso"
+  id: ChestIPC
+  name: ipc chest
   parent: PartIPC
   components:
   - type: Sprite
-    netsync: false
     sprite: Mobs/Species/IPC/parts.rsi
-    state: "torso_m"
-  - type: Icon
-    sprite: Mobs/Species/IPC/parts.rsi
-    state: "torso_m"
+    state: chest_m
   - type: BodyPart
-    partType: Torso
+    partType: Chest
+
+- type: entity
+  id: GroinIPC
+  name: ipc groin
+  parent: PartIPC
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/IPC/parts.rsi
+    state: groin_m
+  - type: BodyPart
+    partType: Groin
+# WD EDIT END
 
 - type: entity
   id: HeadIPC
@@ -68,8 +77,7 @@
     sprite: Mobs/Species/IPC/parts.rsi
     state: "l_arm"
   - type: BodyPart
-    partType: Arm
-    symmetry: Left
+    partType: LeftArm # WD EDIT
 
 - type: entity
   id: RightArmIPC
@@ -84,8 +92,7 @@
     sprite: Mobs/Species/IPC/parts.rsi
     state: "r_arm"
   - type: BodyPart
-    partType: Arm
-    symmetry: Right
+    partType: RightArm # WD EDIT
 
 - type: entity
   id: LeftHandIPC
@@ -100,8 +107,7 @@
     sprite: Mobs/Species/IPC/parts.rsi
     state: "l_hand"
   - type: BodyPart
-    partType: Hand
-    symmetry: Left
+    partType: LeftHand # WD EDIT
 
 - type: entity
   id: RightHandIPC
@@ -116,8 +122,7 @@
     sprite: Mobs/Species/IPC/parts.rsi
     state: "r_hand"
   - type: BodyPart
-    partType: Hand
-    symmetry: Right
+    partType: RightHand # WD EDIT
 
 - type: entity
   id: LeftLegIPC
@@ -132,8 +137,7 @@
     sprite: Mobs/Species/IPC/parts.rsi
     state: "l_leg"
   - type: BodyPart
-    partType: Leg
-    symmetry: Left
+    partType: LeftLeg # WD EDIT
   - type: MovementBodyPart
 
 - type: entity
@@ -149,8 +153,7 @@
     sprite: Mobs/Species/IPC/parts.rsi
     state: "r_leg"
   - type: BodyPart
-    partType: Leg
-    symmetry: Right
+    partType: RightLeg # WD EDIT
   - type: MovementBodyPart
 
 - type: entity
@@ -166,8 +169,7 @@
     sprite: Mobs/Species/IPC/parts.rsi
     state: "l_foot"
   - type: BodyPart
-    partType: Foot
-    symmetry: Left
+    partType: LeftFoot # WD EDIT
 
 - type: entity
   id: RightFootIPC
@@ -182,5 +184,4 @@
     sprite: Mobs/Species/IPC/parts.rsi
     state: "r_foot"
   - type: BodyPart
-    partType: Foot
-    symmetry: Right
+    partType: RightFoot # WD EDIT

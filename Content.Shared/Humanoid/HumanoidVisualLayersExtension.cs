@@ -1,4 +1,4 @@
-using Content.Shared.Body.Components;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Body.Part;
 
 namespace Content.Shared.Humanoid
@@ -70,67 +70,37 @@ namespace Content.Shared.Humanoid
 
         public static HumanoidVisualLayers? ToHumanoidLayers(this BodyPartComponent part)
         {
+            // WD EDIT START
             switch (part.PartType)
             {
-                case BodyPartType.Other:
+                case BodyPart.Other:
                     break;
-                case BodyPartType.Torso:
-                    return HumanoidVisualLayers.Chest;
-                case BodyPartType.Tail:
-                    return HumanoidVisualLayers.Tail;
-                case BodyPartType.Head:
-                    // use the Sublayers method to hide the rest of the parts,
-                    // if that's what you're looking for
+                case BodyPart.Head:
                     return HumanoidVisualLayers.Head;
-                case BodyPartType.Arm:
-                    switch (part.Symmetry)
-                    {
-                        case BodyPartSymmetry.None:
-                            break;
-                        case BodyPartSymmetry.Left:
-                            return HumanoidVisualLayers.LArm;
-                        case BodyPartSymmetry.Right:
-                            return HumanoidVisualLayers.RArm;
-                    }
-
-                    break;
-                case BodyPartType.Hand:
-                    switch (part.Symmetry)
-                    {
-                        case BodyPartSymmetry.None:
-                            break;
-                        case BodyPartSymmetry.Left:
-                            return HumanoidVisualLayers.LHand;
-                        case BodyPartSymmetry.Right:
-                            return HumanoidVisualLayers.RHand;
-                    }
-
-                    break;
-                case BodyPartType.Leg:
-                    switch (part.Symmetry)
-                    {
-                        case BodyPartSymmetry.None:
-                            break;
-                        case BodyPartSymmetry.Left:
-                            return HumanoidVisualLayers.LLeg;
-                        case BodyPartSymmetry.Right:
-                            return HumanoidVisualLayers.RLeg;
-                    }
-
-                    break;
-                case BodyPartType.Foot:
-                    switch (part.Symmetry)
-                    {
-                        case BodyPartSymmetry.None:
-                            break;
-                        case BodyPartSymmetry.Left:
-                            return HumanoidVisualLayers.LFoot;
-                        case BodyPartSymmetry.Right:
-                            return HumanoidVisualLayers.RFoot;
-                    }
-
-                    break;
+                case BodyPart.Chest:
+                    return HumanoidVisualLayers.Chest;
+                case BodyPart.Groin:
+                    return HumanoidVisualLayers.Groin;
+                case BodyPart.RightArm:
+                    return HumanoidVisualLayers.RArm;
+                case BodyPart.RightHand:
+                    return HumanoidVisualLayers.RHand;
+                case BodyPart.LeftArm:
+                    return HumanoidVisualLayers.LArm;
+                case BodyPart.LeftHand:
+                    return HumanoidVisualLayers.LHand;
+                case BodyPart.RightLeg:
+                    return HumanoidVisualLayers.RLeg;
+                case BodyPart.RightFoot:
+                    return HumanoidVisualLayers.RFoot;
+                case BodyPart.LeftLeg:
+                    return HumanoidVisualLayers.LLeg;
+                case BodyPart.LeftFoot:
+                    return HumanoidVisualLayers.LFoot;
+                case BodyPart.Tail:
+                    return HumanoidVisualLayers.Tail;
             }
+            // WD EDIT END
 
             return null;
         }

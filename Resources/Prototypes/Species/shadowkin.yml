@@ -34,7 +34,10 @@
     HeadTop: MobShadowkinAnyMarkingFollowSkin
     HeadSide: MobShadowkinAnyMarkingFollowSkin
     Tail: MobShadowkinAnyMarkingFollowSkin
-    Chest: MobShadowkinTorso
+    # WD EDIT START
+    Chest: MobShadowkinChest
+    Groin: MobShadowkinGroin
+    # WD EDIT END
     Eyes: MobShadowkinEyes
     LArm: MobShadowkinLArm
     RArm: MobShadowkinRArm
@@ -106,23 +109,43 @@
     sprite: Mobs/Species/Shadowkin/parts.rsi
     state: head_f
 
+# WD EDIT START
 - type: humanoidBaseSprite
-  id: MobShadowkinTorso
+  id: MobShadowkinChest
   baseSprite:
     sprite: Mobs/Species/Shadowkin/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
-  id: MobShadowkinTorsoMale
+  id: MobShadowkinChestMale
   baseSprite:
     sprite: Mobs/Species/Shadowkin/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
-  id: MobShadowkinTorsoFemale
+  id: MobShadowkinChestFemale
   baseSprite:
     sprite: Mobs/Species/Shadowkin/parts.rsi
-    state: torso_f
+    state: chest_f
+
+- type: humanoidBaseSprite
+  id: MobShadowkinGroin
+  baseSprite:
+    sprite: Mobs/Species/Shadowkin/parts.rsi
+    state: groin_m
+
+- type: humanoidBaseSprite
+  id: MobShadowkinGroinMale
+  baseSprite:
+    sprite: Mobs/Species/Shadowkin/parts.rsi
+    state: groin_m
+
+- type: humanoidBaseSprite
+  id: MobShadowkinGroinFemale
+  baseSprite:
+    sprite: Mobs/Species/Shadowkin/parts.rsi
+    state: groin_f
+# WD EDIT END
 
 - type: humanoidBaseSprite
   id: MobShadowkinLLeg

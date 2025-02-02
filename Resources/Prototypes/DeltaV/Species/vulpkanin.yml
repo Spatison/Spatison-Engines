@@ -19,7 +19,10 @@
     Hair: MobHumanoidAnyMarking
     FacialHair: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
-    Chest: MobVulpkaninTorso
+    # WD EDIT START
+    Chest: MobVulpkaninChest
+    Groin: MobVulpkaninGroin
+    # WD EDIT END
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
     Tail: MobHumanoidAnyMarking
@@ -99,23 +102,43 @@
     sprite: DeltaV/Mobs/Species/Vulpkanin/parts.rsi
     state: head_f
 
+# WD EDIT START
 - type: humanoidBaseSprite
-  id: MobVulpkaninTorso
+  id: MobVulpkaninChest
   baseSprite:
     sprite: DeltaV/Mobs/Species/Vulpkanin/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
-  id: MobVulpkaninTorsoMale
+  id: MobVulpkaninChestMale
   baseSprite:
     sprite: DeltaV/Mobs/Species/Vulpkanin/parts.rsi
-    state: torso_m
+    state: chest_m
 
 - type: humanoidBaseSprite
-  id: MobVulpkaninTorsoFemale
+  id: MobVulpkaninChestFemale
   baseSprite:
     sprite: DeltaV/Mobs/Species/Vulpkanin/parts.rsi
-    state: torso_f
+    state: chest_f
+
+- type: humanoidBaseSprite
+  id: MobVulpkaninGroin
+  baseSprite:
+    sprite: DeltaV/Mobs/Species/Vulpkanin/parts.rsi
+    state: groin_m
+
+- type: humanoidBaseSprite
+  id: MobVulpkaninGroinMale
+  baseSprite:
+    sprite: DeltaV/Mobs/Species/Vulpkanin/parts.rsi
+    state: groin_m
+
+- type: humanoidBaseSprite
+  id: MobVulpkaninGroinFemale
+  baseSprite:
+    sprite: DeltaV/Mobs/Species/Vulpkanin/parts.rsi
+    state: groin_f
+# WD EDIT END
 
 - type: humanoidBaseSprite
   id: MobVulpkaninLLeg

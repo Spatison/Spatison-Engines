@@ -34,9 +34,22 @@
   speciesRestriction: [IPC]
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
-    state: torso-primary
+    state: chest-primary # WD EDIT
   - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
-    state: torso-secondary
+    state: chest-secondary # WD EDIT
+
+# WD EDIT START
+- type: marking
+  id: CyberLimbsMarkingBishopGroin
+  bodyPart: Groin
+  markingCategory: Groin
+  speciesRestriction: [IPC]
+  sprites:
+  - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
+    state: groin-primary
+  - sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
+    state: groin-secondary
+# WD EDIT END
 
 - type: marking
   id: CyberLimbsMarkingBishopLArm

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from /tg/station and modified by Rane",
+  "copyright": "Taken from /tg/station and modified by Rane. Chest and Groin by WWDP",
   "size": {
     "x": 32,
     "y": 32
@@ -13,6 +13,10 @@
     },
     {
       "name": "cultgolem_chest",
+      "directions": 4
+    },
+    {
+      "name": "cultgolem_groin",
       "directions": 4
     },
     {

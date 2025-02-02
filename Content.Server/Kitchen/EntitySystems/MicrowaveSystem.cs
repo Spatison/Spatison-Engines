@@ -11,7 +11,6 @@ using Content.Server.Power.EntitySystems;
 using Content.Server.Temperature.Components;
 using Content.Server.Temperature.Systems;
 using Content.Shared.Body.Components;
-using Content.Shared.Body.Part;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Construction.EntitySystems;
@@ -33,6 +32,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using System.Linq;
+using Content.Shared._White.TargetDoll;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
@@ -240,7 +240,7 @@ namespace Content.Server.Kitchen.EntitySystems
 
             if (TryComp<BodyComponent>(victim, out var body))
             {
-                var headSlots = _bodySystem.GetBodyChildrenOfType(victim, BodyPartType.Head, body);
+                var headSlots = _bodySystem.GetBodyChildrenOfType(victim, BodyPart.Head, body); // WD EDIT
 
                 foreach (var part in headSlots)
                 {

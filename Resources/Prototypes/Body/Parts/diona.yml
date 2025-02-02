@@ -7,13 +7,23 @@
   - type: Sprite
     sprite: Mobs/Species/Diona/parts.rsi
 
+# WD EDIT START
 - type: entity
-  id: TorsoDiona
-  name: "diona torso"
-  parent: [PartDiona, BaseTorso]
+  id: ChestDiona
+  name: diona chest
+  parent: [PartDiona, BaseChest]
   components:
   - type: Sprite
-    state: "torso_m"
+    state: chest_m
+
+- type: entity
+  id: GroinDiona
+  name: diona groin
+  parent: [PartDiona, BaseGroin]
+  components:
+  - type: Sprite
+    state: groin_m
+# WD EDIT END
 
 - type: entity
   id: HeadDiona
@@ -70,9 +80,6 @@
   components:
   - type: Sprite
     state: "r_leg"
-  - type: BodyPart
-    partType: Leg
-    symmetry: Right
 
 - type: entity
   id: LeftFootDiona
@@ -81,9 +88,6 @@
   components:
   - type: Sprite
     state: "l_foot"
-  - type: BodyPart
-    partType: Foot
-    symmetry: Left
 
 - type: entity
   id: RightFootDiona
@@ -92,6 +96,3 @@
   components:
   - type: Sprite
     state: "r_foot"
-  - type: BodyPart
-    partType: Foot
-    symmetry: Right

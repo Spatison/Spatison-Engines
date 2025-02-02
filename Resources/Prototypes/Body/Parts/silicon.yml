@@ -33,8 +33,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Hand
-    symmetry: Left
+    partType: LeftHand # WD EDIT
   - type: Tag
     tags:
     - Trash
@@ -47,8 +46,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Hand
-    symmetry: Right
+    partType: RightHand # WD EDIT
   - type: Tag
     tags:
     - Trash
@@ -61,8 +59,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Leg
-    symmetry: Left
+    partType: LeftLeg # WD EDIT
   - type: Tag
     tags:
     - Trash
@@ -75,8 +72,7 @@
   abstract: true
   components:
   - type: BodyPart
-    partType: Leg
-    symmetry: Right
+    partType: RightLeg # WD EDIT
   - type: Tag
     tags:
     - Trash

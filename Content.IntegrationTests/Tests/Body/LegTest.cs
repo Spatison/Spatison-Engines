@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using Content.Server.Body.Systems;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
 using Content.Shared.Rotation;
@@ -57,7 +58,7 @@ namespace Content.IntegrationTests.Tests.Body
                 Assert.That(!appearanceSystem.TryGetData(human, RotationVisuals.RotationState, out RotationState _, appearance));
 
                 var bodySystem = entityManager.System<BodySystem>();
-                var legs = bodySystem.GetBodyChildrenOfType(human, BodyPartType.Leg, body);
+                var legs = bodySystem.GetBodyChildrenOfType(human, BodyPart.Legs, body); // WD EDIT
 
                 foreach (var leg in legs)
                 {

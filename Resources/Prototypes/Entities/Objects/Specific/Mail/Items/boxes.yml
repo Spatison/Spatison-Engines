@@ -65,8 +65,12 @@
     contents:
     - id: HeadHuman
       amount: 1
-    - id: TorsoHuman
+    - id: ChestHuman # WD EDIT
       amount: 1
+    # WD EDIT START
+    - id: GroinHuman
+      amount: 1
+    # WD EDIT END
     - id: LeftArmHuman
       amount: 1
     - id: RightArmHuman
@@ -85,7 +89,7 @@
       amount: 1
   - type: Storage
     grid:
-    - 0,0,4,3
+    - 0,0,5,3 # WD EDIT
     whitelist:
       components:
       - BodyPart
@@ -132,8 +136,12 @@
     contents:
     - id: HeadReptilian
       amount: 1
-    - id: TorsoReptilian
+    - id: ChestReptilian # WD EDIT
       amount: 1
+    # WD EDIT START
+    - id: GroinReptilian
+      amount: 1
+    # WD EDIT END
     - id: LeftArmReptilian
       amount: 1
     - id: RightArmReptilian
@@ -162,8 +170,12 @@
     contents:
     - id: HeadSlime
       amount: 1
-    - id: TorsoSlime
+    - id: ChestSlime # WD EDIT
       amount: 1
+    # WD EDIT START
+    - id: GroinSlime
+      amount: 1
+    # WD EDIT END
     - id: LeftArmSlime
       amount: 1
     - id: RightArmSlime
@@ -192,8 +204,12 @@
     contents:
     - id: HeadVulpkanin
       amount: 1
-    - id: TorsoVulpkanin
+    - id: ChestVulpkanin # WD EDIT
       amount: 1
+    # WD EDIT START
+    - id: GroinVulpkanin
+      amount: 1
+    # WD EDIT END
     - id: LeftArmVulpkanin
       amount: 1
     - id: RightArmVulpkanin

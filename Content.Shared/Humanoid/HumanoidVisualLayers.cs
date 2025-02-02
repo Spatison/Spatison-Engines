@@ -1,5 +1,4 @@
-﻿using Content.Shared.Humanoid.Markings;
-using Robust.Shared.Serialization;
+﻿using Robust.Shared.Serialization;
 
 namespace Content.Shared.Humanoid
 {
@@ -10,6 +9,7 @@ namespace Content.Shared.Humanoid
         Hair,
         FacialHair,
         Chest,
+        Groin, // WD EDIT
         Head,
         Snout,
         HeadSide, // side parts (i.e., frills)

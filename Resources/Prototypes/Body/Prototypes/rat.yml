@@ -1,10 +1,12 @@
 ﻿- type: body
   id: Rat
   name: "animal"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoRat
+    # WD EDIT START
+    chest:
+      part: ChestRat
+      # WD EDIT END
       connections:
       - legs
       organs:

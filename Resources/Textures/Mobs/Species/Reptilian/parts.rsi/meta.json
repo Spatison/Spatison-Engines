@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "https://github.com/tgstation/tgstation/blob/8024397cc81c5f47f74cf4279e35728487d0a1a7/icons/mob/human_parts_greyscale.dmi",
+    "copyright": "https://github.com/tgstation/tgstation/blob/8024397cc81c5f47f74cf4279e35728487d0a1a7/icons/mob/human_parts_greyscale.dmi. Chest and Groin by WWDP",
     "size": {
         "x": 32,
         "y": 32
@@ -50,13 +50,21 @@
             "name": "r_leg",
             "directions": 4
         },
-        {
-            "name": "torso_f",
-            "directions": 4
-        },
-        {
-            "name": "torso_m",
-            "directions": 4
-        }
+    	{
+  	    "name": "chest_f",
+  	    "directions": 4
+    	},
+    	{
+  	    "name": "chest_m",
+  	    "directions": 4
+    	},
+    	{
+  	    "name": "groin_f",
+  	    "directions": 4
+    	},
+    	{
+  	    "name": "groin_m",
+   	   "directions": 4
+    	}
     ]
 }

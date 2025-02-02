@@ -1,28 +1,37 @@
 ﻿- type: body
   id: Dwarf
   name: "dwarf"
-  root: torso
+  root: chest # WD EDIT
   slots:
     head:
       part: HeadHuman
       connections:
-      - torso
+      - chest # WD EDIT
       organs:
         brain: OrganHumanBrain
         eyes: OrganHumanEyes
-    torso:
-      part: TorsoHuman
+    # WD EDIT START
+    chest:
+      part: ChestHuman
+      # WD EDIT END
       connections:
       - right arm
       - left arm
-      - right leg
-      - left leg
+      - groin # WD EDIT
       organs:
         heart: OrganDwarfHeart
         lungs: OrganHumanLungs
+    # WD EDIT START
+    groin:
+      part: GroinHuman
+      connections:
+      - right leg
+      - left leg
+      organs:
         stomach: OrganDwarfStomach
         liver: OrganDwarfLiver
         kidneys: OrganHumanKidneys
+    # WD EDIT END
     right arm:
       part: RightArmHuman
       connections:

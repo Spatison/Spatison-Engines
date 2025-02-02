@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Server.Administration;
 using Content.Server.Body.Systems;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Administration;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
@@ -129,13 +130,13 @@ namespace Content.Server.Body.Commands
 
             var bodySystem = _entManager.System<BodySystem>();
 
-            var attachAt = bodySystem.GetBodyChildrenOfType(entity, BodyPartType.Arm, body).FirstOrDefault();
+            var attachAt = bodySystem.GetBodyChildrenOfType(entity, BodyPart.Arms, body).FirstOrDefault(); // WD EDIT
             if (attachAt == default)
                 attachAt = bodySystem.GetBodyChildren(entity, body).First();
 
             var slotId = part.GetHashCode().ToString();
 
-            if (!bodySystem.TryCreatePartSlotAndAttach(attachAt.Id, slotId, hand, BodyPartType.Hand, attachAt.Component, part))
+            if (!bodySystem.TryCreatePartSlotAndAttach(attachAt.Id, slotId, hand, BodyPart.Hands, attachAt.Component, part)) // WD EDIT
             {
                 shell.WriteError($"Couldn't create a slot with id {slotId} on entity {_entManager.ToPrettyString(entity)}");
                 return;

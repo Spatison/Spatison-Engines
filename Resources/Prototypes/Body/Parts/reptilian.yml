@@ -14,21 +14,39 @@
       - ReagentId: Blood
         Quantity: 10
 
+# WD EDIT START
 - type: entity
-  id: TorsoReptilian
-  name: "reptilian torso"
-  parent: [PartReptilian, BaseTorso]
+  id: ChestReptilian
+  name: reptilian chest
+  parent: [PartReptilian, BaseChest]
   components:
   - type: Sprite
     sprite: Mobs/Species/Reptilian/parts.rsi
-    state: "torso_m"
+    state: chest_m
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  id: GroinReptilian
+  name: reptilian groin
+  parent: [PartReptilian, BaseGroin]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: groin_m
   - type: Extractable
     juiceSolution:
       reagents:
       - ReagentId: Fat
         Quantity: 10
       - ReagentId: Blood
-        Quantity: 20
+        Quantity: 15
+# WD EDIT END
 
 - type: entity
   id: HeadReptilian

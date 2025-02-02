@@ -1,28 +1,37 @@
 ﻿- type: body
   name: "reptilian"
   id: Reptilian
-  root: torso
+  root: chest # WD EDIT
   slots:
     head:
       part: HeadReptilian
       connections:
-      - torso
+      - chest # WD EDIT
       organs:
         brain: OrganHumanBrain
         eyes: OrganHumanEyes
-    torso:
-      part: TorsoReptilian
+    # WD EDIT START
+    chest:
+      part: ChestReptilian
+      # WD EDIT END
       organs:
         heart: OrganAnimalHeart
         lungs: OrganHumanLungs
+      connections:
+      - right arm
+      - left arm
+      - groin # WD EDIT
+    # WD EDIT START
+    groin:
+      part: GroinReptilian
+      organs:
         stomach: OrganReptilianStomach
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys
       connections:
-      - right arm
-      - left arm
       - right leg
       - left leg
+    # WD EDIT END
     right arm:
       part: RightArmReptilian
       connections:

@@ -45,7 +45,10 @@
   sprites:
     Head: MobHumanHead
     Hair: MobHumanoidAnyMarking
-    Chest: MobHumanTorso
+    # WD EDIT START
+    Chest: MobHumanChest
+    Groin: MobHumanGroin
+    # WD EDIT END
     Eyes: MobArachneEyes
     LArm: MobHumanLArm
     RArm: MobHumanRArm

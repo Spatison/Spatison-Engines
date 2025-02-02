@@ -8,6 +8,7 @@ using Content.Server.Body.Systems;
 using Content.Server.Hands.Systems;
 using Content.Server.Stack;
 using Content.Server.Tools;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Body.Part;
 using Content.Shared.DoAfter;
 using Content.Shared.Hands.Components;
@@ -226,7 +227,7 @@ public abstract partial class InteractionTest
             // I lost an hour of my life trying to track down how the hell interaction tests were breaking
             // so greatz to this. Just make your own body prototype!
             var bodySystem = SEntMan.System<BodySystem>();
-            var hands = bodySystem.GetBodyChildrenOfType(SEntMan.GetEntity(Player), BodyPartType.Hand).ToArray();
+            var hands = bodySystem.GetBodyChildrenOfType(SEntMan.GetEntity(Player), BodyPart.Hands).ToArray(); // WD EDIT
 
             for (var i = 1; i < hands.Length; i++)
             {

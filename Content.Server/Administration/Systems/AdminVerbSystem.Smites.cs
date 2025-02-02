@@ -18,6 +18,7 @@ using Content.Server.Storage.Components;
 using Content.Server.Storage.EntitySystems;
 using Content.Server.Tabletop;
 using Content.Server.Tabletop.Components;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Components;
 using Content.Shared.Body.Components;
@@ -315,7 +316,7 @@ public sealed partial class AdminVerbSystem
                 Act = () =>
                 {
                     var baseXform = Transform(args.Target);
-                    foreach (var part in _bodySystem.GetBodyChildrenOfType(args.Target, BodyPartType.Hand))
+                    foreach (var part in _bodySystem.GetBodyChildrenOfType(args.Target, BodyPart.Hands)) // WD EDIT
                     {
                         _transformSystem.AttachToGridOrMap(part.Id);
                     }
@@ -337,7 +338,7 @@ public sealed partial class AdminVerbSystem
                 Act = () =>
                 {
                     var baseXform = Transform(args.Target);
-                    foreach (var part in _bodySystem.GetBodyChildrenOfType(args.Target, BodyPartType.Hand, body))
+                    foreach (var part in _bodySystem.GetBodyChildrenOfType(args.Target, BodyPart.Hands, body)) // WD EDIT
                     {
                         _transformSystem.AttachToGridOrMap(part.Id);
                         break;

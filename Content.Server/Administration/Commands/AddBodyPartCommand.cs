@@ -1,6 +1,6 @@
 using Content.Server.Body.Systems;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Administration;
-using Content.Shared.Body.Part;
 using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands
@@ -40,7 +40,7 @@ namespace Content.Server.Administration.Commands
 
 
 
-            if (Enum.TryParse<BodyPartType>(args[3], out var partType) &&
+            if (Enum.TryParse<BodyPart>(args[3], out var partType) && // WD EDIT
                 bodySystem.TryCreatePartSlotAndAttach(parentId, args[2], childId, partType))
             {
                 shell.WriteLine($@"Added {childId} to {parentId}.");

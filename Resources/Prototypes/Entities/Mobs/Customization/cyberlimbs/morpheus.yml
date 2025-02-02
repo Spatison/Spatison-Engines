@@ -38,7 +38,23 @@
           color: "#FFFFFF"
   sprites:
   - sprite: Mobs/Customization/cyberlimbs/morpheus/morpheus_main.rsi
-    state: torso
+    state: chest # WD DIT
+
+# WD EDIT START
+- type: marking
+  id: CyberLimbsMarkingMorpheusGroin
+  bodyPart: Groin
+  markingCategory: Groin
+  speciesRestriction: [IPC]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/cyberlimbs/morpheus/morpheus_main.rsi
+    state: groin # WD DIT
+# WD EDIT END
 
 - type: marking
   id: CyberLimbsMarkingMorpheusLArm

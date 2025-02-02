@@ -1,7 +1,7 @@
 using System.Linq;
 using Content.Server.Body.Systems;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Alert;
-using Content.Shared.Body.Part;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
@@ -74,7 +74,7 @@ public sealed partial class EnsnareableSystem
         if (!TryComp<EnsnareableComponent>(target, out var ensnareable))
             return;
 
-        var legs = _body.GetBodyChildrenOfType(target, BodyPartType.Leg).Count();
+        var legs = _body.GetBodyChildrenOfType(target, BodyPart.Legs).Count(); // WD EDIT
         var ensnaredLegs = (2 * ensnareable.Container.ContainedEntities.Count);
         var freeLegs = legs - ensnaredLegs;
 

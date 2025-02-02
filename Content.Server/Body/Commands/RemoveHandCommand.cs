@@ -1,9 +1,9 @@
 using System.Linq;
 using Content.Server.Administration;
 using Content.Server.Body.Systems;
+using Content.Shared._White.TargetDoll;
 using Content.Shared.Administration;
 using Content.Shared.Body.Components;
-using Content.Shared.Body.Part;
 using Robust.Shared.Console;
 using Robust.Shared.Random;
 
@@ -43,7 +43,7 @@ namespace Content.Server.Body.Commands
             }
 
             var bodySystem = _entManager.System<BodySystem>();
-            var hand = bodySystem.GetBodyChildrenOfType(player.AttachedEntity.Value, BodyPartType.Hand, body).FirstOrDefault();
+            var hand = bodySystem.GetBodyChildrenOfType(player.AttachedEntity.Value, BodyPart.Hands, body).FirstOrDefault(); // WD EDIT
 
             if (hand == default)
             {

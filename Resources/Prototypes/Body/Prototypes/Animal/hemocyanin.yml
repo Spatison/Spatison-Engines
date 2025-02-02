@@ -1,10 +1,12 @@
 ﻿- type: body
   id: AnimalHemocyanin
   name: "hemocyanin"
-  root: torso
+  root: chest # WD EDIT
   slots:
-    torso:
-      part: TorsoAnimal
+    # WD EDIT START
+    chest:
+      part: ChestAnimal
+      # WD EDIT END
       connections:
       - legs
       organs:

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Original drawn by @robustyanka on Discord, modified by @pspritechologist",
+  "copyright": "Original drawn by @robustyanka on Discord, modified by @pspritechologist. Chest and Groin by WWDP",
   "size": {
     "x": 32,
     "y": 32
@@ -19,11 +19,19 @@
       "directions": 4
     },
     {
-      "name": "torso_m",
+      "name": "chest_f",
       "directions": 4
     },
     {
-      "name": "torso_f",
+      "name": "chest_m",
+      "directions": 4
+    },
+    {
+      "name": "groin_f",
+      "directions": 4
+    },
+    {
+      "name": "groin_m",
       "directions": 4
     },
     {

@@ -1,19 +1,27 @@
 ﻿- type: body
   id: Skeleton
   name: "skeleton"
-  root: torso
+  root: chest # WD EDIT
   slots:
     head:
       part: HeadSkeleton
       connections:
-      - torso
-    torso:
-      part: TorsoSkeleton
+      - chest # WD EDIT
+    # WD EDIT START
+    chest:
+      part: ChestSkeleton
+      # WD EDIT END
       connections:
       - right arm
       - left arm
+      - groin # WD EDIT
+    # WD EDIT START
+    groin:
+      part: GroinSkeleton
+      connections:
       - right leg
       - left leg
+    # WD EDIT END
     right arm:
       part: RightArmSkeleton
       connections:
