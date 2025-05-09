@@ -1,7 +1,7 @@
 using Content.Server.Body.Components;
 using Content.Server.Chemistry.Containers.EntitySystems;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Body.Organ;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.Reagent;

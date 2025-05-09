@@ -1,0 +1,93 @@
+- type: entity
+  id: BaseBone
+  parent: BaseItem
+  name: base bone
+  abstract: true
+  components:
+  - type: Bone
+  - type: StaticPrice
+    price: 100
+  - type: Tag
+    tags:
+    - Trash
+
+- type: entity
+  id: BaseThorax
+  parent: BaseBone
+  name: rib cage
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Thorax
+
+- type: entity
+  id: BaseCoxae
+  parent: BaseBone
+  name: pelvis
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Coxae
+
+- type: entity
+  id: BaseСranium
+  parent: BaseBone
+  name: skull
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Сranium
+
+- type: entity
+  id: BaseHumerus
+  parent: BaseBone
+  name: humerus
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Humerus
+
+- type: entity
+  id: BaseAntebrachii
+  parent: BaseBone
+  name: forearm bones
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Antebrachii
+
+- type: entity
+  id: BaseManus
+  parent: BaseBone
+  name: carpal bone
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Manus
+
+- type: entity
+  id: BaseFemur
+  parent: BaseBone
+  name: femur
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Femur
+
+- type: entity
+  id: BaseCrus
+  parent: BaseBone
+  name: shin bones
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Crus
+
+- type: entity
+  id: BasePedis
+  parent: BaseBone
+  name: foot bones
+  abstract: true
+  components:
+  - type: Bone
+    boneType: Pedis

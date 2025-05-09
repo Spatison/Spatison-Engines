@@ -1,9 +1,9 @@
 using System.Linq;
+using Content.Server._White.Body.Systems;
 using Content.Server.Administration;
-using Content.Server.Body.Systems;
-using Content.Shared._White.TargetDoll;
+using Content.Shared._White.Body;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Administration;
-using Content.Shared.Body.Components;
 using Robust.Shared.Console;
 using Robust.Shared.Random;
 
@@ -43,7 +43,7 @@ namespace Content.Server.Body.Commands
             }
 
             var bodySystem = _entManager.System<BodySystem>();
-            var hand = bodySystem.GetBodyChildrenOfType(player.AttachedEntity.Value, BodyPart.Hands, body).FirstOrDefault(); // WD EDIT
+            var hand = bodySystem.GetBodyParts(player.AttachedEntity.Value, body, BodyPart.Hands).FirstOrDefault(); // WD EDIT
 
             if (hand == default)
             {
@@ -51,7 +51,7 @@ namespace Content.Server.Body.Commands
             }
             else
             {
-                _entManager.System<SharedTransformSystem>().AttachToGridOrMap(hand.Id);
+                _entManager.System<SharedTransformSystem>().AttachToGridOrMap(hand.Uid);
             }
         }
     }

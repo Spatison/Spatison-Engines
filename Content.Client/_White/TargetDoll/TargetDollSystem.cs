@@ -1,3 +1,4 @@
+using Content.Shared._White.Body;
 using Content.Shared._White.TargetDoll;
 using Robust.Client.Player;
 using Robust.Shared.Input.Binding;

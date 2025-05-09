@@ -1,3 +1,4 @@
+using Content.Server._White.Body.Systems;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Chemistry.Containers.EntitySystems;
@@ -7,8 +8,8 @@ using Content.Server.Forensics;
 using Content.Server.Inventory;
 using Content.Server.Popups;
 using Content.Server.Traits.Assorted.Components;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Body.Components;
 using Content.Shared.CCVar;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;

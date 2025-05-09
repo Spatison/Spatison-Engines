@@ -1,6 +1,7 @@
+/*
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Shared._White.TargetDoll;
+using Content.Shared._White.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
 using Content.Shared.Body.Organ;
@@ -10,6 +11,8 @@ using Content.Shared.Damage.Prototypes;
 using Content.Shared.Movement.Components;
 using Robust.Shared.Containers;
 using Robust.Shared.Utility;
+using BodyPartSlot = Content.Shared.Body.Part.BodyPartSlot;
+
 
 namespace Content.Shared.Body.Systems;
 
@@ -385,7 +388,7 @@ public partial class SharedBodySystem
         return Resolve(partId, ref part, logMissing: false)
             && Resolve(parentId, ref parentPart, logMissing: false)
             && parentPart.Children.TryGetValue(slotId, out var parentSlotData)
-            && part.PartType == parentSlotData.Type
+            && (parentSlotData.Type & part.PartType) != 0 // WD EDIT
             && Containers.TryGetContainer(parentId, GetPartSlotContainerId(slotId), out var container)
             && Containers.CanInsert(partId, container);
     }
@@ -793,3 +796,4 @@ public partial class SharedBodySystem
 
     #endregion
 }
+*/

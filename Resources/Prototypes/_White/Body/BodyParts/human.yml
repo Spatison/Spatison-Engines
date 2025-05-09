@@ -1,0 +1,229 @@
+- type: entity
+  id: PartHuman
+  parent: BasePart
+  name: human body part
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: ChestHuman
+  parent: [PartHuman, BaseChest]
+  name: human chest
+  components:
+  - type: Sprite
+    state: chest_m
+  - type: BodyPart
+    children:
+      head:
+        type: Head
+      groin:
+        type: Groin
+      right_arm:
+        type: RightArm
+      left_arm:
+        type: LeftArm
+    bones:
+      rib_cage:
+        type: Thorax
+        startingBone: ThoraxHuman
+        organsData:
+          heart:
+            type: Heart
+          lungs:
+            type: Lungs
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  id: GroinHuman
+  parent: [PartHuman, BaseGroin]
+  name: human groin
+  components:
+  - type: Sprite
+    state: groin_m
+  - type: BodyPart
+    children:
+      right_leg:
+        type: RightLeg
+      left_leg:
+        type: LeftLeg
+    bones:
+      pelvis:
+        type: Coxae
+        startingBone: CoxaeHuman
+    organs:
+      stomach:
+        type: Stomach
+      liver:
+        type: Liver
+      kidneys:
+        type: Kidneys
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 15
+
+- type: entity
+  id: HeadHuman
+  parent: [PartHuman, BaseHead]
+  name: human head
+  components:
+  - type: Sprite
+    state: head_m
+  - type: BodyPart
+    bones:
+      skull:
+        type: Сranium
+        startingBone: СraniumHuman
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: LeftArmHuman
+  parent: [PartHuman, BaseLeftArm]
+  name: left human arm
+  components:
+  - type: Sprite
+    state: l_arm
+  - type: BodyPart
+    children:
+      left_hand:
+        type: LeftHand
+    bones:
+      humerus:
+        type: Humerus
+        startingBone: HumerusHuman
+      forearm:
+        type: Antebrachii
+        startingBone: AntebrachiiHuman
+
+- type: entity
+  id: RightArmHuman
+  parent: [PartHuman, BaseRightArm]
+  name: right human arm
+  components:
+  - type: Sprite
+    state: r_arm
+  - type: BodyPart
+    children:
+      right_hand:
+        type: RightHand
+    bones:
+      humerus:
+        type: Humerus
+        startingBone: HumerusHuman
+      forearm:
+        type: Antebrachii
+        startingBone: AntebrachiiHuman
+
+- type: entity
+  id: LeftHandHuman
+  parent: [PartHuman, BaseLeftHand]
+  name: left human hand
+  components:
+  - type: Sprite
+    state: l_hand
+  - type: BodyPart
+    bones:
+      carpal:
+        type: Manus
+        startingBone: ManusHuman
+
+- type: entity
+  id: RightHandHuman
+  parent: [PartHuman, BaseRightHand]
+  name: right human hand
+  components:
+  - type: Sprite
+    state: r_hand
+  - type: BodyPart
+    bones:
+      carpal:
+        type: Manus
+        startingBone: ManusHuman
+
+- type: entity
+  id: LeftLegHuman
+  parent: [PartHuman, BaseLeftLeg]
+  name: left human leg
+  components:
+  - type: Sprite
+    state: l_leg
+  - type: BodyPart
+    children:
+      left_foot:
+        type: LeftFoot
+    bones:
+      femur:
+        type: Femur
+        startingBone: FemurHuman
+      shin:
+        type: Crus
+        startingBone: CrusHuman
+
+- type: entity
+  id: RightLegHuman
+  parent: [PartHuman, BaseRightLeg]
+  name: right human leg
+  components:
+  - type: Sprite
+    state: r_leg
+  - type: BodyPart
+    children:
+      right_foot:
+        type: RightFoot
+    bones:
+      femur:
+        type: Femur
+        startingBone: FemurHuman
+      shin:
+        type: Crus
+        startingBone: CrusHuman
+
+- type: entity
+  id: LeftFootHuman
+  parent: [PartHuman, BaseLeftFoot]
+  name: left human foot
+  components:
+  - type: Sprite
+    state: l_foot
+  - type: BodyPart
+    bones:
+      foot:
+        type: Pedis
+        startingBone: PedisHuman
+
+- type: entity
+  id: RightFootHuman
+  parent: [PartHuman, BaseRightFoot]
+  name: right human foot
+  components:
+  - type: Sprite
+    state: r_foot
+  - type: BodyPart
+    bones:
+      foot:
+        type: Pedis
+        startingBone: PedisHuman

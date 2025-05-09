@@ -50,8 +50,8 @@
   - type: MeleeWeapon
     angle: 0
     animation: WeaponArcBite
-  - type: Body
-    prototype: Animal
+  # - type: Body TODO
+  #   prototype: Animal
   - type: Climbing
   - type: NameIdentifier
     group: GenericNumber

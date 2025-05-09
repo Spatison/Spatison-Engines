@@ -1,3 +1,4 @@
+/*
 namespace Content.Shared.Body.Events;
 
 // All of these events are raised on a mechanism entity when added/removed to a body in different
@@ -26,3 +27,4 @@ public readonly record struct OrganRemovedEvent(EntityUid OldPart);
 /// </summary>
 [ByRefEvent]
 public readonly record struct OrganRemovedFromBodyEvent(EntityUid OldBody, EntityUid OldPart);
+*/

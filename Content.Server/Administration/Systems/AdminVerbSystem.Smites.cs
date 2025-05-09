@@ -1,4 +1,5 @@
 using System.Threading;
+using Content.Server._White.Body.Systems;
 using Content.Server.Administration.Commands;
 using Content.Server.Administration.Components;
 using Content.Server.Atmos.Components;
@@ -18,11 +19,10 @@ using Content.Server.Storage.Components;
 using Content.Server.Storage.EntitySystems;
 using Content.Server.Tabletop;
 using Content.Server.Tabletop.Components;
-using Content.Shared._White.TargetDoll;
+using Content.Shared._White.Body;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Components;
-using Content.Shared.Body.Components;
-using Content.Shared.Body.Part;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Cluwne;
 using Content.Shared.Damage;
@@ -316,9 +316,9 @@ public sealed partial class AdminVerbSystem
                 Act = () =>
                 {
                     var baseXform = Transform(args.Target);
-                    foreach (var part in _bodySystem.GetBodyChildrenOfType(args.Target, BodyPart.Hands)) // WD EDIT
+                    foreach (var part in _bodySystem.GetBodyParts(args.Target, type:BodyPart.Hands)) // WD EDIT
                     {
-                        _transformSystem.AttachToGridOrMap(part.Id);
+                        _transformSystem.AttachToGridOrMap(part.Uid);
                     }
                     _popupSystem.PopupEntity(Loc.GetString("admin-smite-remove-hands-self"), args.Target,
                         args.Target, PopupType.LargeCaution);
@@ -338,9 +338,9 @@ public sealed partial class AdminVerbSystem
                 Act = () =>
                 {
                     var baseXform = Transform(args.Target);
-                    foreach (var part in _bodySystem.GetBodyChildrenOfType(args.Target, BodyPart.Hands, body)) // WD EDIT
+                    foreach (var part in _bodySystem.GetBodyParts(args.Target, body, BodyPart.Hands)) // WD EDIT
                     {
-                        _transformSystem.AttachToGridOrMap(part.Id);
+                        _transformSystem.AttachToGridOrMap(part.Uid);
                         break;
                     }
                     _popupSystem.PopupEntity(Loc.GetString("admin-smite-remove-hands-self"), args.Target,

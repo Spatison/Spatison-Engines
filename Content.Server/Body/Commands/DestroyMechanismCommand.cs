@@ -1,7 +1,7 @@
+using Content.Server._White.Body.Systems;
 using Content.Server.Administration;
-using Content.Server.Body.Systems;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Administration;
-using Content.Shared.Body.Components;
 using Robust.Shared.Console;
 using Robust.Shared.Random;
 
@@ -50,11 +50,11 @@ namespace Content.Server.Body.Commands
             var mechanismName = string.Join(" ", args).ToLowerInvariant();
             var bodySystem = entityManager.System<BodySystem>();
 
-            foreach (var organ in bodySystem.GetBodyOrgans(attached, body))
+            foreach (var organ in bodySystem.GetOrgans(attached, body)) // WD EDIT
             {
                 if (fac.GetComponentName(organ.Component.GetType()).ToLowerInvariant() == mechanismName)
                 {
-                    entityManager.QueueDeleteEntity(organ.Id);
+                    entityManager.QueueDeleteEntity(organ.Uid); // WD EDIT
                     shell.WriteLine($"Mechanism with name {mechanismName} has been destroyed.");
                     return;
                 }

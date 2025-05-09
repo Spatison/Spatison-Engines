@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿/*
+using System.Linq;
 using Content.Shared.Body.Organ;
 using Content.Shared.Prototypes;
 using Robust.Shared.Prototypes;
@@ -189,3 +190,4 @@ public sealed class BodyPrototypeSerializer : ITypeReader<BodyPrototype, Mapping
         return new BodyPrototype(id, name, root, slots);
     }
 }
+*/

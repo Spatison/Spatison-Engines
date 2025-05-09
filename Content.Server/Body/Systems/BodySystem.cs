@@ -1,3 +1,4 @@
+/*
 using Content.Server.Body.Components;
 using Content.Server.GameTicking;
 using Content.Server.Humanoid;
@@ -133,3 +134,4 @@ public sealed class BodySystem : SharedBodySystem
         return gibs;
     }
 }
+*/

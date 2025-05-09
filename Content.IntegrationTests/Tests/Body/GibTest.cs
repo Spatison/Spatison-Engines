@@ -1,5 +1,5 @@
 ﻿#nullable enable
-using Content.Server.Body.Systems;
+using Content.Server._White.Body.Systems;
 using Robust.Shared.GameObjects;
 
 namespace Content.IntegrationTests.Tests.Body;

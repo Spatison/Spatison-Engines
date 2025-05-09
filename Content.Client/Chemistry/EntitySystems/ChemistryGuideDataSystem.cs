@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Content.Client.Chemistry.Containers.EntitySystems;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Atmos.Prototypes;
-using Content.Shared.Body.Part;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;

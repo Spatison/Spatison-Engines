@@ -6,14 +6,17 @@
     head:
       part: HeadHuman
       connections:
-      - chest # WD EDIT
-      organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
     # WD EDIT START
+      - chest
+      bones:
+        skull:
+          bone: BoneHeadHuman
+          organs:
+            brain: OrganHumanBrain
+            eyes: OrganHumanEyes
     chest:
       part: ChestHuman
-      # WD EDIT END
+    # WD EDIT END
       connections:
       - right_arm
       - left_arm

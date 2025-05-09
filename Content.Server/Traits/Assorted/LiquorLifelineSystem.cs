@@ -1,6 +1,6 @@
+using Content.Server._White.Body.Systems;
 using Content.Server.Body.Components;
-using Content.Server.Body.Systems;
-using Content.Shared.Body.Components;
+using Content.Shared._White.Body.Components;
 
 namespace Content.Server.Traits.Assorted;
 

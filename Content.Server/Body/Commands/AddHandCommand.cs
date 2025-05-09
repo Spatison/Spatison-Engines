@@ -1,10 +1,9 @@
 using System.Linq;
+using Content.Server._White.Body.Systems;
 using Content.Server.Administration;
-using Content.Server.Body.Systems;
-using Content.Shared._White.TargetDoll;
+using Content.Shared._White.Body;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Administration;
-using Content.Shared.Body.Components;
-using Content.Shared.Body.Part;
 using Robust.Shared.Console;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -114,7 +113,7 @@ namespace Content.Server.Body.Commands
                     return;
             }
 
-            if (!_entManager.TryGetComponent(entity, out BodyComponent? body) || body.RootContainer.ContainedEntity == null)
+            if (!_entManager.TryGetComponent(entity, out BodyComponent? body) || body.BodyParts[body.RootBodyPartId].ContainerSlot!.ContainedEntity == null) // WD EDIT
             {
                 var text = $"You have no body{(_random.Prob(0.2f) ? " and you must scream." : ".")}";
 
@@ -130,13 +129,13 @@ namespace Content.Server.Body.Commands
 
             var bodySystem = _entManager.System<BodySystem>();
 
-            var attachAt = bodySystem.GetBodyChildrenOfType(entity, BodyPart.Arms, body).FirstOrDefault(); // WD EDIT
+            var attachAt = bodySystem.GetBodyParts(entity, body, BodyPart.Arms).FirstOrDefault(); // WD EDIT
             if (attachAt == default)
-                attachAt = bodySystem.GetBodyChildren(entity, body).First();
+                attachAt = bodySystem.GetBodyParts(entity, body).First(); // WD EDIT
 
             var slotId = part.GetHashCode().ToString();
 
-            if (!bodySystem.TryCreatePartSlotAndAttach(attachAt.Id, slotId, hand, BodyPart.Hands, attachAt.Component, part)) // WD EDIT
+            if (!bodySystem.TryCreateBodyPartSlotAndAttach(attachAt.Uid, slotId, hand, BodyPart.Hands, attachAt.Component, part)) // WD EDIT
             {
                 shell.WriteError($"Couldn't create a slot with id {slotId} on entity {_entManager.ToPrettyString(entity)}");
                 return;

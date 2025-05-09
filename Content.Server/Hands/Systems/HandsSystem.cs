@@ -2,9 +2,8 @@ using System.Numerics;
 using Content.Server.Inventory;
 using Content.Server.Stack;
 using Content.Server.Stunnable;
-using Content.Shared._White.TargetDoll;
+using Content.Shared._White.Body;
 using Content.Shared.ActionBlocker;
-using Content.Shared.Body.Part;
 using Content.Shared.CombatMode;
 using Content.Shared.Explosion;
 using Content.Shared.Hands.Components;
@@ -116,7 +115,7 @@ namespace Content.Server.Hands.Systems
             };
             // WD EDIT END
 
-            AddHand(uid, args.Slot, location);
+            AddHand(uid, args.SlotId, location); // WD EDIT
         }
 
         private void HandleBodyPartRemoved(EntityUid uid, HandsComponent component, ref BodyPartRemovedEvent args)
@@ -124,7 +123,7 @@ namespace Content.Server.Hands.Systems
             if ((BodyPart.Hands & args.Part.Comp.PartType ) == 0) // WD EDIT
                 return;
 
-            RemoveHand(uid, args.Slot);
+            RemoveHand(uid, args.SlotId); // WD EDIT
         }
 
         #region pulling

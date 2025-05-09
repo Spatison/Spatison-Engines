@@ -1,4 +1,5 @@
-﻿using Content.Shared._White.TargetDoll;
+﻿/*
+using Content.Shared._White.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
 using Robust.Shared.Containers;
@@ -110,3 +111,4 @@ public partial struct OrganSlot
         Id = id;
     }
 };
+*/

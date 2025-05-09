@@ -1,8 +1,7 @@
 ﻿using System.Numerics;
-using Content.Server.Body.Systems;
-using Content.Shared._White.TargetDoll;
-using Content.Shared.Body.Components;
-using Content.Shared.Body.Part;
+using Content.Server._White.Body.Systems;
+using Content.Shared._White.Body;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Rotation;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
@@ -58,11 +57,11 @@ namespace Content.IntegrationTests.Tests.Body
                 Assert.That(!appearanceSystem.TryGetData(human, RotationVisuals.RotationState, out RotationState _, appearance));
 
                 var bodySystem = entityManager.System<BodySystem>();
-                var legs = bodySystem.GetBodyChildrenOfType(human, BodyPart.Legs, body); // WD EDIT
+                var legs = bodySystem.GetBodyParts(human, body, BodyPart.Legs); // WD EDIT
 
                 foreach (var leg in legs)
                 {
-                    xformSystem.DetachParentToNull(leg.Id, entityManager.GetComponent<TransformComponent>(leg.Id));
+                    xformSystem.DetachParentToNull(leg.Uid, entityManager.GetComponent<TransformComponent>(leg.Uid));
                 }
             });
 

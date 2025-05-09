@@ -4,12 +4,12 @@ using System.Numerics;
 using Content.Client.Construction;
 using Content.Client.Examine;
 using Content.IntegrationTests.Pair;
+using Content.Server._White.Body.Systems;
 using Content.Server.Body.Systems;
 using Content.Server.Hands.Systems;
 using Content.Server.Stack;
 using Content.Server.Tools;
-using Content.Shared._White.TargetDoll;
-using Content.Shared.Body.Part;
+using Content.Shared._White.Body;
 using Content.Shared.DoAfter;
 using Content.Shared.Hands.Components;
 using Content.Shared.Interaction;
@@ -227,11 +227,11 @@ public abstract partial class InteractionTest
             // I lost an hour of my life trying to track down how the hell interaction tests were breaking
             // so greatz to this. Just make your own body prototype!
             var bodySystem = SEntMan.System<BodySystem>();
-            var hands = bodySystem.GetBodyChildrenOfType(SEntMan.GetEntity(Player), BodyPart.Hands).ToArray(); // WD EDIT
+            var hands = bodySystem.GetBodyParts(SEntMan.GetEntity(Player), type:BodyPart.Hands).ToArray(); // WD EDIT
 
             for (var i = 1; i < hands.Length; i++)
             {
-                SEntMan.DeleteEntity(hands[i].Id);
+                SEntMan.DeleteEntity(hands[i].Uid); // WD EDIT
             }
         });
 

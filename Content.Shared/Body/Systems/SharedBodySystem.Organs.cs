@@ -1,3 +1,4 @@
+/*
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
@@ -213,3 +214,4 @@ public partial class SharedBodySystem
         return false;
     }
 }
+*/

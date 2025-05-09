@@ -1,8 +1,8 @@
 using Content.Server.Bible.Components;
+using Content.Shared._White.Body.Components;
+using Content.Shared._White.Body.Systems;
 using Content.Shared.Abilities.Psionics;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Body.Components;
-using Content.Shared.Body.Systems;
 using Content.Shared.Database;
 using Content.Shared.Chapel;
 using Content.Shared.DoAfter;

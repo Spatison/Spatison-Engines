@@ -1,7 +1,7 @@
-using Content.Server.Body.Systems;
+using Content.Server._White.Body.Systems;
 using Content.Server.Polymorph.Components;
 using Content.Server.Popups;
-using Content.Shared.Body.Components;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Popups;

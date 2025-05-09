@@ -1,7 +1,7 @@
-﻿using Content.Server.Body.Systems;
+﻿using Content.Server._White.Body.Systems;
 using Content.Server.Kitchen.Components;
 using Content.Server.Nutrition.EntitySystems;
-using Content.Shared.Body.Components;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Interaction;

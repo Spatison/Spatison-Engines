@@ -1,5 +1,6 @@
-using Content.Shared._White.TargetDoll;
-using Content.Shared.Body.Part;
+using Content.Shared._White.Body;
+using Content.Shared._White.Body.Components;
+
 
 namespace Content.Shared.Humanoid
 {

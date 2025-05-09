@@ -1,0 +1,140 @@
+# TODO: Descriptions?
+- type: entity
+  id: BoneHuman
+  parent: BaseBone
+  name: human bone
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Skeleton/parts.rsi # TODO: Sprite?
+
+# Rib cage
+
+- type: entity
+  id: ThoraxHuman
+  parent: [BoneHuman, BaseThorax]
+  name: human rib cage
+  components:
+  - type: Sprite
+    state: chest_f
+  - type: Bone
+    organs:
+      heart:
+        type: Heart
+      lungs:
+        type: Lungs
+
+- type: entity
+  id: ThoraxHumanFull
+  parent: ThoraxHuman
+  suffix: Full
+  components:
+  - type: Bone
+    organs:
+      heart:
+        type: Heart
+        startingOrgan: OrganHumanHeart
+      lungs:
+        type: Lungs
+        startingOrgan: OrganHumanLungs
+
+# Pelvis
+
+- type: entity
+  id: CoxaeHuman
+  parent: [BoneHuman, BaseCoxae]
+  name: human pelvis
+  components:
+  - type: Sprite
+    state: groin_f
+
+# Skull
+
+- type: entity
+  id: СraniumHuman
+  parent: [BoneHuman, BaseСranium]
+  name: human skull
+  components:
+  - type: Sprite
+    state: skull_icon
+    scale: 0.5, 0.5
+  - type: Bone
+    organs:
+      brain:
+        type: Brain
+      eyes:
+        type: Eyes
+
+- type: entity
+  id: СraniumHumanFull
+  parent: СraniumHuman
+  suffix: Full
+  components:
+  - type: Bone
+    organs:
+      brain:
+        type: Brain
+        startingOrgan: OrganHumanBrain
+      eyes:
+        type: Eyes
+        startingOrgan: OrganHumanEyes
+
+# Humerus
+
+- type: entity
+  id: HumerusHuman
+  parent: [BoneHuman, BaseHumerus]
+  name: human humerus
+  components:
+  - type: Sprite
+    state: r_arm # TODO
+
+# Forearm bones
+
+- type: entity
+  id: AntebrachiiHuman
+  parent: [BoneHuman, BaseAntebrachii]
+  name: human forearm bones
+  components:
+  - type: Sprite
+    state: r_arm # TODO
+
+# Сarpal bone
+
+- type: entity
+  id: ManusHuman
+  parent: [BoneHuman, BaseManus]
+  name: human carpal bone
+  components:
+  - type: Sprite
+    state: r_hand # TODO
+
+# Femur
+
+- type: entity
+  id: FemurHuman
+  parent: [BoneHuman, BaseFemur]
+  name: human femur
+  components:
+  - type: Sprite
+    state: r_leg # TODO
+
+# Shin
+
+- type: entity
+  id: CrusHuman
+  parent: [BoneHuman, BaseCrus]
+  name: human shin bones
+  components:
+  - type: Sprite
+    state: r_leg # TODO
+
+# Foot bones
+
+- type: entity
+  id: PedisHuman
+  parent: [BoneHuman, BasePedis]
+  name: human foot bones
+  components:
+  - type: Sprite
+    state: r_foot # TODO

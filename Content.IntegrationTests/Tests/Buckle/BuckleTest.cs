@@ -1,9 +1,9 @@
 using System.Numerics;
-using Content.Server.Body.Systems;
-using Content.Shared._White.TargetDoll;
+using Content.Server._White.Body.Systems;
+using Content.Shared._White.Body;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Buckle;
 using Content.Shared.ActionBlocker;
-using Content.Shared.Body.Components;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
@@ -305,12 +305,12 @@ namespace Content.IntegrationTests.Tests.Buckle
                 }
 
                 var bodySystem = entityManager.System<BodySystem>();
-                var legs = bodySystem.GetBodyChildrenOfType(human, BodyPart.Legs, body); // WD EDIT
+                var legs = bodySystem.GetBodyParts(human, body, BodyPart.Legs); // WD EDIT
 
                 // Break our guy's kneecaps
                 foreach (var leg in legs)
                 {
-                    xformSystem.DetachParentToNull(leg.Id, entityManager.GetComponent<TransformComponent>(leg.Id));
+                    xformSystem.DetachParentToNull(leg.Uid, entityManager.GetComponent<TransformComponent>(leg.Uid));
                 }
             });
 

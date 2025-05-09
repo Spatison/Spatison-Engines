@@ -1,3 +1,4 @@
+/*
 using Content.Shared.Body.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
@@ -14,3 +15,4 @@ public sealed partial class OrganComponent : Component
     [DataField, AutoNetworkedField]
     public EntityUid? Body;
 }
+*/

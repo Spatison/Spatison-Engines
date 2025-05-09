@@ -1,7 +1,7 @@
 #nullable enable
 using System.Numerics;
 using Content.Server.Cuffs;
-using Content.Shared.Body.Components;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Cuffs.Components;
 using Content.Shared.Hands.Components;
 using Robust.Server.Console;

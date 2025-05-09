@@ -1,3 +1,4 @@
+/*
 using Content.Shared.Damage;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Standing;
@@ -11,7 +12,7 @@ public abstract partial class SharedBodySystem : EntitySystem
 {
     /*
      * See the body partial for how this works.
-     */
+     #1#
 
     /// <summary>
     /// Container ID prefix for any body parts.
@@ -75,3 +76,4 @@ public abstract partial class SharedBodySystem : EntitySystem
         return OrganSlotContainerIdPrefix + slotId;
     }
 }
+*/

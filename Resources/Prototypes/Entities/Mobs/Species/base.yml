@@ -149,6 +149,71 @@
     reflectProb: 0
   - type: Body
     prototype: Human
+    rootBodyPartId: chest
+    bodyParts:
+      head:
+        type: Head
+        startingBodyPart: HeadHuman
+      chest:
+        type: Chest
+        startingBodyPart: ChestHuman
+        childBodyPart:
+        - head
+        - groin
+        - right_arm
+        - left_arm
+        bonesData:
+          rib_cage:
+            organsData:
+              heart:
+                startingOrgan: OrganHumanHeart
+              lungs:
+                startingOrgan: OrganHumanLungs
+      groin:
+        type: Groin
+        startingBodyPart: GroinHuman
+        childBodyPart:
+        - right_leg
+        - left_leg
+        organsData:
+          stomach:
+            startingOrgan: OrganHumanStomach
+          liver:
+            startingOrgan: OrganHumanLiver
+          kidneys:
+            startingOrgan: OrganHumanKidneys
+      right_arm:
+        type: RightArm
+        startingBodyPart: RightArmHuman
+        childBodyPart:
+        - right_hand
+      right_hand:
+        type: RightHand
+        startingBodyPart: RightHandHuman
+      left_arm:
+        type: LeftArm
+        startingBodyPart: LeftArmHuman
+        childBodyPart:
+        - left_hand
+      left_hand:
+        type: LeftHand
+        startingBodyPart: LeftHandHuman
+      right_leg:
+        type: RightLeg
+        startingBodyPart: RightLegHuman
+        childBodyPart:
+        - right_foot
+      right_foot:
+        type: RightFoot
+        startingBodyPart: RightFootHuman
+      left_leg:
+        type: LeftLeg
+        startingBodyPart: LeftLegHuman
+        childBodyPart:
+        - left_foot
+      left_foot:
+        type: LeftFoot
+        startingBodyPart: LeftFootHuman
     requiredLegs: 2
   - type: Identity
   - type: IdExaminable

@@ -1,3 +1,4 @@
+/*
 using System.Linq;
 using System.Numerics;
 using Content.Shared.Body.Components;
@@ -24,7 +25,7 @@ public partial class SharedBodySystem
      * - BodyComponent uses a BodyPrototype as a template.
      * - On MapInit we spawn the root entity in the prototype and spawn all connections outwards from here
      * - Each "connection" is a body part (e.g. arm, hand, etc.) and each part can also contain organs.
-     */
+     #1#
 
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly GibbingSystem _gibbingSystem = default!;
@@ -334,3 +335,4 @@ public partial class SharedBodySystem
         return gibs;
     }
 }
+*/

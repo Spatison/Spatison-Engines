@@ -1,7 +1,7 @@
 using Content.Server.Body.Components;
 using Content.Server.Ghost.Components;
-using Content.Shared.Body.Components;
-using Content.Shared.Body.Events;
+using Content.Shared._White.Body;
+using Content.Shared._White.Body.Components;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Pointing;
@@ -16,10 +16,11 @@ namespace Content.Server.Body.Systems
         {
             base.Initialize();
 
-            SubscribeLocalEvent<BrainComponent, OrganAddedToBodyEvent>((uid, _, args) => HandleMind(args.Body, uid));
-            SubscribeLocalEvent<BrainComponent, OrganRemovedFromBodyEvent>((uid, _, args) => HandleMind(uid, args.OldBody));
+            SubscribeLocalEvent<BrainComponent, OrganAddedEvent>((uid, _, args) => HandleMind(args.Body!.Value, uid));
+            SubscribeLocalEvent<BrainComponent, OrganRemovedEvent>((uid, _, args) => HandleMind(uid, args.Body!.Value));
             SubscribeLocalEvent<BrainComponent, PointAttemptEvent>(OnPointAttempt);
         }
+
 
         private void HandleMind(EntityUid newEntity, EntityUid oldEntity)
         {

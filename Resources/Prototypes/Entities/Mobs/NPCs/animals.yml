@@ -1583,8 +1583,8 @@
   id: MobMouse
   description: Squeak!
   components:
-  - type: Body
-    prototype: Mouse
+  # - type: Body TODO
+  #   prototype: Mouse
   - type: GhostRole
     makeSentient: true
     allowSpeech: true
